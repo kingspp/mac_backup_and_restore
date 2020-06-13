@@ -45,7 +45,10 @@ echo "Installing Homebrew . . ."
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai  
+brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas
+
+# Tap cask
+brew tap homebrew/cask
 
 # Move config files here
 cp .skhdrc ~/
@@ -55,9 +58,6 @@ cp .yabairc ~/
 brew services start koekeishiya/formulae/skhd
 brew services start koekeishiya/formulae/yabai
 
-brew tap homebrew/cask
-brew install brew-cask 
-
 # Install Conda
 wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh
 bash Anaconda3-2020.02-MacOSX-x86_64.sh -b
@@ -66,12 +66,6 @@ bash Anaconda3-2020.02-MacOSX-x86_64.sh -b
 wget https://iterm2.com/downloads/stable/iTerm2-3_3_11.zip
 unzip iTerm2-3_3_11.zip
 mv iTerm.app /Applications
-
-# Install Chrome
-brew cask install google-chrome sublime-text mas
-
-# Signin to mas
-mas signin kingspprathyush@gmail.com
 
 # Install BTT
 wget https://folivora.ai/releases/BetterTouchTool.zip
@@ -93,22 +87,10 @@ wget https://dl4.cdn.filezilla-project.org/client/FileZilla_3.48.1_macosx-x86.ap
 tar -xvf FileZilla_3.48.1_macosx-x86.app.tar.bz2
 mv FileZilla.app /Applications
 
-# Monitor Control
-brew cask install monitorcontrol
-
 # App Cleaner
 wget https://freemacsoft.net/downloads/AppCleaner_3.5.zip
 unzip AppCleaner_3.5.zip
 mv AppCleaner.app /Applications
-
-# Install Amphetamine
-mas lucky amphetamine
-
-# Install Irvue
-mas lucky irvue
-
-# Install Timeout
-mas lucky timeout
 
 # Install Trashit
 wget https://nonamescriptware.com/wp-content/uploads/Trashit.zip
@@ -119,6 +101,25 @@ mv Trash\ It\!\ 7.5 /Applications
 wget https://crystalidea.com/downloads/macsfancontrol.zip
 unzip macsfancontrol.zip
 mv Macs\ Fan\ Control.app /Applications
+
+##############################################################################
+## Cask Application
+##############################################################################
+
+# Install Chrome
+brew cask install google-chrome sublime-text monitorcontrol
+
+# Signin to mas
+mas signin kingspprathyush@gmail.com
+
+# Install Amphetamine
+mas lucky amphetamine
+
+# Install Irvue
+mas lucky irvue
+
+# Install Timeout
+mas lucky timeout
 
 ##############################################################################
 ## Cleanup
