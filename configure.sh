@@ -42,7 +42,7 @@ sudo xcode-select --install
 
 echo "Installing Homebrew . . ."
 # Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
 brew install tree coreutils yabi skhd brew-cask fish ranger figlet pandoc
