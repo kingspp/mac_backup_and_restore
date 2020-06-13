@@ -42,7 +42,7 @@ sudo xcode-select --install
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install tree coreutils yabi skhd brew-cask
+brew install tree coreutils yabi skhd brew-cask fish ranger
 
 # Install Conda
 wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh
