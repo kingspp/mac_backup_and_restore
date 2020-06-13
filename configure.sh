@@ -47,7 +47,15 @@ CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/insta
 # Brew packages
 brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai  
 
-brew tap caskroom/cask
+# Move config files here
+cp .skhdrc ~/
+cp .yabairc ~/
+
+# Start services
+brew services start koekeishiya/formulae/skhd
+brew services start koekeishiya/formulae/yabai
+
+brew tap homebrew/cask
 brew install brew-cask 
 
 # Install Conda
