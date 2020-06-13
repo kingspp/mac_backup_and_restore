@@ -45,7 +45,7 @@ echo "Installing Homebrew . . ."
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas
+brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas docker
 
 # Tap cask
 brew tap homebrew/cask
@@ -106,8 +106,11 @@ mv Macs\ Fan\ Control.app /Applications
 ## Cask Application
 ##############################################################################
 
+# Install terminal fonts
+brew tap homebrew/cask-fonts && brew cask install font-iosevka && brew cask install font-iosevka-slab
+
 # Install Chrome
-brew cask install google-chrome sublime-text monitorcontrol
+brew cask install google-chrome sublime-text monitorcontrol vlc zoom handbrake all-in-one-messenger transmission
 
 # Signin to mas
 mas signin kingspprathyush@gmail.com
