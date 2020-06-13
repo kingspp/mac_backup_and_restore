@@ -45,7 +45,7 @@ echo "Installing Homebrew . . ."
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install wget fish ranger figlet pandoc tree coreutils yabai skhd 
+brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai  
 
 brew tap caskroom/cask
 brew install brew-cask 
