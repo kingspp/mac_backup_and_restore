@@ -8,6 +8,7 @@ cd ${TMP_DIR}
 ##############################################################################
 ## CONFIGS
 ##############################################################################
+echo "Applying MAC Default configs . . ."
 # Show Full File Path in Finder
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES; killall Finder
 
@@ -35,14 +36,16 @@ sudo defaults write com.apple.screencapture type png
 ##############################################################################
 ## Packages
 ##############################################################################
+echo "Installing Packages . . ."
 # Install Mac Development Tools
 sudo xcode-select --install
 
+echo "Installing Homebrew . . ."
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install tree coreutils yabi skhd brew-cask fish ranger
+brew install tree coreutils yabi skhd brew-cask fish ranger figlet pandoc
 
 # Install Conda
 wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh
@@ -109,6 +112,10 @@ mv Macs\ Fan\ Control.app /Applications
 ##############################################################################
 ## Cleanup
 ##############################################################################
+echo "Cleaning up temporary files . . ."
 rm -rf ${TMP_DIR}
 
+echo "####################################"
+echo "Installation Completed Successfully"
+echo "####################################"
 
