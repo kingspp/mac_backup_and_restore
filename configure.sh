@@ -45,7 +45,10 @@ echo "Installing Homebrew . . ."
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install wget brew-cask fish ranger figlet pandoc tree coreutils yabai skhd 
+brew install wget fish ranger figlet pandoc tree coreutils yabai skhd 
+
+brew tap caskroom/cask
+brew install brew-cask 
 
 # Install Conda
 wget https://repo.anaconda.com/archive/Anaconda3-2020.02-MacOSX-x86_64.sh
