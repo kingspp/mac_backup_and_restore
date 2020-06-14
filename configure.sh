@@ -115,6 +115,10 @@ wget https://crystalidea.com/downloads/macsfancontrol.zip
 unzip macsfancontrol.zip
 mv Macs\ Fan\ Control.app /Applications
 
+wget https://unclutterapp.com/files/Unclutter.zip
+unzip Unclutter.zip
+mv Unclutter.app /Applications
+
 ##############################################################################
 ## Cask Application
 ##############################################################################
