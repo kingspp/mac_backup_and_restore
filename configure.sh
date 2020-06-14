@@ -59,6 +59,9 @@ CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/insta
 # Brew packages
 brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas docker brightness
 
+# Install OMF
+curl -L https://get.oh-my.fish | fish
+
 # Tap cask
 brew tap homebrew/cask
 
@@ -140,6 +143,19 @@ mas lucky irvue
 
 # Install Timeout
 mas lucky timeout
+
+##############################################################################
+## Terminal Configuration
+##############################################################################
+
+# Enhancd setup - https://github.com/b4b4r07/enhancd
+brew tap jhawthorn/fzy
+brew install fzy ccat
+omf install https://github.com/b4b4r07/enhancd
+
+# Bob the fish - Git aware, glyph support
+omf install bobthefish
+
 
 ##############################################################################
 ## Cleanup
