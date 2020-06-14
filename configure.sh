@@ -110,7 +110,7 @@ mv Macs\ Fan\ Control.app /Applications
 brew tap homebrew/cask-fonts && brew cask install font-iosevka && brew cask install font-iosevka-slab
 
 # Install Chrome
-brew cask install google-chrome sublime-text monitorcontrol vlc zoom handbrake all-in-one-messenger transmission
+brew cask install google-chrome sublime-text monitorcontrol vlc zoom handbrake all-in-one-messenger transmission pycharm
 
 # Signin to mas
 mas signin kingspprathyush@gmail.com
