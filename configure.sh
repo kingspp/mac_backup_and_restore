@@ -3,6 +3,7 @@
 TMP_DIR="/tmp/"$(uuidgen)
 
 mkdir -p ${TMP_DIR}
+mkdir -p ~/opt
 cd ${TMP_DIR}
 
 ##############################################################################
@@ -39,6 +40,11 @@ defaults write com.apple.PowerChime ChimeOnAllHardware -bool true && open /Syste
 # Screensaver Immediate Lock
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
+# Git configs
+git config user.name kingspp
+git config user.email kingspprathyush@gmail.com
+
+
 ##############################################################################
 ## Packages
 ##############################################################################
@@ -51,7 +57,7 @@ echo "Installing Homebrew . . ."
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas docker
+brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas docker brightness
 
 # Tap cask
 brew tap homebrew/cask
@@ -59,6 +65,7 @@ brew tap homebrew/cask
 # Move config files here
 cp .skhdrc ~/
 cp .yabairc ~/
+cp -R scripts ~/opt/
 
 # Start services
 brew services start koekeishiya/formulae/skhd
