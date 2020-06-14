@@ -33,6 +33,12 @@ defaults write com.apple.dashboard mcx-disabled -boolean TRUE; killall Dock
 # Change screenshot type to png/pdf/tiff/jpg
 sudo defaults write com.apple.screencapture type png
 
+# Play iOS charging sound when MagSafe is connected.
+defaults write com.apple.PowerChime ChimeOnAllHardware -bool true && open /System/Library/CoreServices/PowerChime.app
+
+# Screensaver Immediate Lock
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
 ##############################################################################
 ## Packages
 ##############################################################################
