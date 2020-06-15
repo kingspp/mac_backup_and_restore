@@ -1,5 +1,6 @@
 #!/bin/bash
 
+CUR_DIR=`pwd`
 TMP_DIR="/tmp/"$(uuidgen)
 
 mkdir -p ${TMP_DIR}
@@ -66,8 +67,8 @@ curl -L https://get.oh-my.fish | fish
 brew tap homebrew/cask
 
 # Move config files here
-cp .skhdrc ~/
-cp .yabairc ~/
+cp ${CUR_DIR}/.skhdrc ~/
+cp ${CUR_DIR}/.yabairc ~/
 cp -R scripts ~/opt/
 
 # Start services
@@ -155,6 +156,13 @@ omf install https://github.com/b4b4r07/enhancd
 
 # Bob the fish - Git aware, glyph support
 omf install bobthefish
+
+##############################################################################
+## Package Configuration
+##############################################################################
+
+# Setup matplotlib style
+cp ${CUR_DIR}/.matplotlib ~
 
 
 ##############################################################################
