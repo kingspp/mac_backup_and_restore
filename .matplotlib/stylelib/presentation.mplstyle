@@ -1,0 +1,31 @@
+axes.titlesize : 24
+axes.labelsize : 20
+lines.linewidth : 3
+lines.markersize : 10
+xtick.labelsize : 16
+ytick.labelsize : 16
+legend.fontsize: 18
+figure.figsize: 15,6
+axes.grid: True
+figure.facecolor: white
+axes.labelcolor: 0.15
+xtick.direction: out
+ytick.direction: out
+xtick.color: 0.15
+ytick.color: 0.15
+axes.axisbelow: True
+grid.linestyle: -
+text.color: 0.15
+font.family: sans-serif
+lines.solid_capstyle: round
+patch.edgecolor: white
+patch.force_edgecolor: True
+xtick.top: False
+ytick.right: False
+axes.facecolor: eaeaf2
+axes.edgecolor: white
+grid.color: white
+axes.spines.left: True
+axes.spines.bottom: True
+axes.spines.right: True
+axes.spines.top: True
