@@ -58,7 +58,7 @@ echo "Installing Homebrew . . ."
 CI=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # Brew packages
-brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas docker brightness
+brew install wget fish ranger figlet pandoc tree coreutils koekeishiya/formulae/skhd koekeishiya/formulae/yabai mas docker brightness thefuck
 
 # Install OMF
 curl -L https://get.oh-my.fish | fish
@@ -164,6 +164,11 @@ omf install bobthefish
 # Setup matplotlib style
 cp -R ${CUR_DIR}/.matplotlib ~
 
+##############################################################################
+## Script Configuration
+##############################################################################
+echo 'eval "$(thefuck --alias f)"' >> ~/.bash_profile
+echo "thefuck --alias f | source"  >> ~/.config/fish/config.fish
 
 ##############################################################################
 ## Cleanup
