@@ -145,6 +145,9 @@ mas lucky irvue
 # Install Timeout
 mas lucky timeout
 
+# Install Notability
+mas install 736189492
+
 ##############################################################################
 ## Terminal Configuration
 ##############################################################################
