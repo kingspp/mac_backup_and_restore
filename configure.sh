@@ -123,6 +123,11 @@ wget https://unclutterapp.com/files/Unclutter.zip
 unzip Unclutter.zip
 mv Unclutter.app /Applications
 
+wget https://files.bjango.com/istatmenus6/istatmenus6.40.zip
+unzip istatmenus6.40.zip
+mv iStat\ Menus.app/ /Applications
+
+
 ##############################################################################
 ## Cask Application
 ##############################################################################
